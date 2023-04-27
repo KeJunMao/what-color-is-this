@@ -32,9 +32,9 @@ function createConfigRef<T>(key: string, defaultValue: T, isGlobal = true) {
 }
 
 export const config = reactive({
-  inplace: createConfigRef('whatIsThisColor.inplace', true),
-  enabled: createConfigRef('whatIsThisColor.enabled', true),
-  colorNameMap: createConfigRef('whatIsThisColor.colorNameMap', {}),
+  inplace: createConfigRef('what-color-is-this.inplace', true),
+  enabled: createConfigRef('what-color-is-this.enabled', true),
+  colorNameMap: createConfigRef('what-color-is-this.colorNameMap', {}),
 })
 
 export const colorNameEntries = computed<ColorEntry[]>(() => Object.entries<string>(config.colorNameMap))

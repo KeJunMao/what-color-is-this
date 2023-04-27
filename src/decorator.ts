@@ -115,7 +115,7 @@ export function RegisterDecorator(ctx: ExtensionContext) {
   }, null, ctx.subscriptions)
 
   workspace.onDidChangeConfiguration((event) => {
-    if (event.affectsConfiguration('whatIsThisColor')) {
+    if (event.affectsConfiguration('what-color-is-this')) {
       onConfigUpdated()
       triggerUpdateDecorations()
     }
