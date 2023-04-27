@@ -1,0 +1,103 @@
+{
+  "publisher": "kejun",
+  "name": "what-color-is-this",
+  "displayName": "What color is this?",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@8.1.1",
+  "description": "",
+  "author": "KeJun <kejun1997@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/kejunmao/what-color-is-this#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kejunmao/what-color-is-this"
+  },
+  "bugs": {
+    "url": "https://github.com/kejunmao/what-color-is-this/issues"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./dist/index.js",
+  "icon": "res/logo.png",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "vscode": "^1.69.0"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "what-color-is-this.toggle-enabled",
+        "category": "What Color Is This",
+        "title": "Toggle Enabled"
+      },
+      {
+        "command": "what-color-is-this.toggle-inplace",
+        "category": "What Color Is This",
+        "title": "Toggle In-place Mode"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "What Color Is This?",
+      "properties": {
+        "whatIsThisColor.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enabled \"What Color Is This\""
+        },
+        "whatIsThisColor.inplace": {
+          "type": "boolean",
+          "default": true,
+          "description": "Use color name to replace the color code."
+        },
+        "whatIsThisColor.colorNameMap": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Mapping of colors to names",
+          "default": {}
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --external vscode",
+    "dev": "nr build --watch",
+    "lint": "eslint .",
+    "vscode:prepublish": "nr build",
+    "publish": "vsce publish --no-dependencies",
+    "pack": "vsce package --no-dependencies",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "release": "bumpp && nr publish"
+  },
+  "dependencies": {
+    "@vue/reactivity": "^3.2.47",
+    "tinycolor2": "^1.6.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.38.4",
+    "@antfu/ni": "^0.21.2",
+    "@types/node": "^18.15.11",
+    "@types/tinycolor2": "^1.4.3",
+    "@types/vscode": "^1.77.0",
+    "bumpp": "^9.1.0",
+    "eslint": "^8.37.0",
+    "esno": "^0.16.3",
+    "pnpm": "^8.1.1",
+    "rimraf": "^4.4.1",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.3",
+    "vite": "^4.2.1",
+    "vitest": "^0.29.8",
+    "vsce": "^2.15.0"
+  }
+}

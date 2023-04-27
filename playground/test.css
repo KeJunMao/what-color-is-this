@@ -1,0 +1,9 @@
+div {
+  color: #1f2937;
+  background-color: #fcfcfc;
+  border-color: #48b0f1;
+}
+
+div:hover {
+  background-color: #f6f6f6;
+}

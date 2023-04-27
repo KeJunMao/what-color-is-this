@@ -1,0 +1,8 @@
+{
+  "whatIsThisColor.colorNameMap": {
+    "#fcfcfc": "Background Color",
+    "#f6f6f6": "Hover Background Color",
+    "#1f2937": "Text Color",
+    "#48b0f1": "Primary Color"
+  },
+}
