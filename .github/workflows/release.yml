@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     tags:
-      - 'v*'
+      - "v*"
 
 jobs:
   release:
@@ -13,6 +13,9 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+
       - uses: actions/setup-node@v3
         with:
           node-version: 16.x
@@ -21,6 +24,7 @@ jobs:
       - run: npx changelogithub
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
       - run: pnpm run publish
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
