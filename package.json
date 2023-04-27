@@ -4,7 +4,7 @@
   "displayName": "What color is this?",
   "version": "0.0.1",
   "private": true,
-  "packageManager": "pnpm@8.1.1",
+  "packageManager": "pnpm@8.3.1",
   "description": "",
   "author": "KeJun <kejun1997@gmail.com>",
   "license": "MIT",
@@ -25,7 +25,7 @@
     "dist"
   ],
   "engines": {
-    "vscode": "^1.69.0"
+    "vscode": "^1.77.0"
   },
   "activationEvents": [
     "onStartupFinished"
@@ -84,20 +84,20 @@
     "tinycolor2": "^1.6.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.38.4",
-    "@antfu/ni": "^0.21.2",
-    "@types/node": "^18.15.11",
+    "@antfu/eslint-config": "^0.38.5",
+    "@antfu/ni": "^0.21.3",
+    "@types/node": "^18.16.1",
     "@types/tinycolor2": "^1.4.3",
     "@types/vscode": "^1.77.0",
     "bumpp": "^9.1.0",
-    "eslint": "^8.37.0",
+    "eslint": "^8.39.0",
     "esno": "^0.16.3",
-    "pnpm": "^8.1.1",
-    "rimraf": "^4.4.1",
+    "pnpm": "^8.3.1",
+    "rimraf": "^5.0.0",
     "tsup": "^6.7.0",
-    "typescript": "^5.0.3",
-    "vite": "^4.2.1",
-    "vitest": "^0.29.8",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.3",
+    "vitest": "^0.30.1",
     "vsce": "^2.15.0"
   }
 }
