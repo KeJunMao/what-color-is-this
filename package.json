@@ -2,7 +2,7 @@
   "publisher": "kejun",
   "name": "what-color-is-this",
   "displayName": "What color is this?",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "private": true,
   "packageManager": "pnpm@8.1.1",
   "description": "",
