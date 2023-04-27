@@ -5,7 +5,7 @@
   "version": "0.0.2",
   "private": true,
   "packageManager": "pnpm@8.3.1",
-  "description": "",
+  "description": "Name your color and mom will never have to worry about what that color is for again",
   "author": "KeJun <kejun1997@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/kejunmao/what-color-is-this#readme",
@@ -79,21 +79,19 @@
     "typecheck": "tsc --noEmit",
     "release": "bumpp"
   },
-  "dependencies": {
-    "@vue/reactivity": "^3.2.47",
-    "tinycolor2": "^1.6.0"
-  },
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.5",
     "@antfu/ni": "^0.21.3",
     "@types/node": "^18.16.1",
     "@types/tinycolor2": "^1.4.3",
     "@types/vscode": "^1.77.0",
+    "@vue/reactivity": "^3.2.47",
     "bumpp": "^9.1.0",
     "eslint": "^8.39.0",
     "esno": "^0.16.3",
     "pnpm": "^8.3.1",
     "rimraf": "^5.0.0",
+    "tinycolor2": "^1.6.0",
     "tsup": "^6.7.0",
     "typescript": "^5.0.4",
     "vite": "^4.3.3",
