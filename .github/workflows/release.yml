@@ -21,10 +21,13 @@ jobs:
           node-version: 16.x
           cache: pnpm
 
-      - run: npx changelogithub
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Install Dependencies
+        run: pnpm i
 
       - run: pnpm run publish
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
+
+      - run: npx changelogithub
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
